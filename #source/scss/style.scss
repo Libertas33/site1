@@ -1,0 +1,417 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+/*
+
+// Переменные для блока
+$fz:100px;
+$color_1:#000;
+$color_2:#fff;
+
+// Шаблон №1
+.tplborder{
+	font-size: 100px;
+	border-bottom: 5px dashed red;
+}
+@mixin fontz($f,$c){
+	font-size: $f;
+	color: $c;
+}
+.block{
+	width: 300px / 960px * 100%;
+	background-color: #666;
+	padding: 30px;
+	line-height: 60px;
+	.block__text{
+		font-size: $fz;
+		span{
+			color: green;
+		}
+	}
+}
+.link{
+	@include fontz(80px,green);
+	color: $color_1;
+	text-decoration: underline;
+	font-size: $fz;
+	.block &{
+		font-size: $fz;
+	}
+	&:hover{
+		color: $color_2;
+	}
+	@extend .tplborder;
+}
+.link-2{
+	@include fontz(50px,green);
+	border-bottom: 5px dashed rgb(184, 44, 44);
+	@extend .tplborder;
+}
+
+*/
+
+@mixin cardName {
+	color: #353A3D;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
+	padding: 15px;
+	margin: auto 0px;
+}
+
+.main {
+	position: relative;
+	width: 1900px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+	color: #fff;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+
+}
+
+.header__menu {
+	background: #313131;
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+
+	.menu-logo {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 30px;
+		text-align: center;
+		display: flex;
+	
+
+		& a {
+			color: #fff;
+			font-weight: bold;
+			display: inline-block;
+			height: 100%;
+			line-height: 70px;
+			
+
+			& img {
+				margin: 22px 27px;
+			}
+		}
+		
+	}
+
+	.menu-main {
+		flex: 1 1 700px;
+		display: flex;
+		justify-content: center;
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+
+		& div {
+			padding: 25px 35px;
+			transition: 1s;
+
+		}
+
+		>div:hover {
+			transition: 1s;
+			font-weight: 700;
+			font-size: 22px;
+			color: #FF0000;
+			font-style: bold;
+			
+
+			.hover__test {
+				transition: 0.5s;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				padding-top: 30px;
+				
+				
+				li {
+					margin: 20px auto;
+					a {
+						z-index: 3;
+						color: white;
+					}
+				}
+				
+				
+			}
+
+
+		}
+		
+
+		>div:active{
+			color: #14B9D5;
+			transition: 0s;
+		}
+
+		
+
+	}
+
+.hover__test {
+	display: none;
+
+}
+
+	.menu-search {
+		width: 70px;
+		background-color: black;
+			& img {
+					width: 17px;
+					margin: 26px;
+				}
+	}
+}
+
+
+.header__bg {
+	background: url(../img/header/header_bg.png);
+	width: 100%;
+	height: 370px;
+}
+.heading {
+	text-align: center;
+	padding: 164px 0 44px 0;
+	font-weight: 700;
+	font-size: 27px;
+	text-transform: uppercase;
+}
+.row-buttons {
+	text-align: center;
+
+}
+.button {
+	height: 55px;
+	width: 170px;
+	text-align: center;
+	font-weight: 600;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 10px;
+
+	&.button-green {
+		background-color: #89CA62 ;
+		margin: 0 10px 0  0;
+	}
+
+	&.button-blue {
+		background-color: #14B9D5;
+		margin:  0 0 0 10px;
+	}
+
+
+}
+
+.posts {
+	background-color: #F2F2F2;
+	padding: 50px;
+}
+
+.section-name {
+	text-align: center;
+	padding: 50px 0;
+	font-weight: 700;
+	font-size: 27px;
+	color: #18B4CF;
+	line-height: 37px;
+	font-size: bold;
+	text-transform: uppercase;
+}
+.posts__cols {
+	display: flex;
+}
+
+.col-posts {
+	max-width: 370px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+
+.col__name {
+	@include cardName;
+	background: #fff;
+
+}
+
+
+
+
+
+
+
+.popular {
+	background: url(../img/popular/popular.png);
+	height: 588px;
+	width: 100%;
+	text-align: center;
+	padding: 106px 0 87px 0;
+	position: relative;
+		
+	
+
+	
+}
+.popular__clients {
+	font-size: 32px;
+	color: #fff;
+	line-height: 44px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+}
+.popular__solid {
+	width: 60px;
+	height: 3px;
+	background-color: #18B4CF;
+	margin: 100px auto;
+}
+.popular__logos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1170px;
+	margin: 0px auto;
+}
+.logo {
+	max-height: 50px;
+	margin: 0 50px;
+	display: flex;
+	align-items: center;
+	flex: 1 1 25%;
+
+
+		& img {
+			width: 100%;
+			
+		}
+}
+
+.galery {
+	display: flex;
+	max-width: 100%;
+
+	& img {
+		width: (100% / 7);
+	}
+}
+
+
+
+.hot__grid { 
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 45px;
+	grid-template-areas: 
+	"one one one two"
+	"tree tree four four"
+	"five five six six"
+	"seven eight eight eight";
+	padding-bottom: 80px;
+
+}
+
+
+.col-hot {
+	
+
+
+	&:nth-child(1) {
+		grid-area: one;
+		display: flex;
+	}
+	&:nth-child(2) {
+		grid-area: two;
+	}
+	&:nth-child(3) {
+		grid-area: tree;
+	}
+	&:nth-child(4) {
+		grid-area: four;
+	}
+	&:nth-child(5) {
+		grid-area: five;
+	}
+	&:nth-child(6) {
+		grid-area: six;
+	}
+	&:nth-child(7) {
+		grid-area: seven;
+	}
+	&:nth-child(8) {
+		grid-area: eight;
+		display: flex;
+	}
+
+
+	& img {
+		width: 100%;
+	}
+}
+
+.hot__name {
+	@include cardName;
+	text-align: right;
+	
+	
+	
+}
+
+p {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 21px;
+		text-align: right;
+		color: #5B6469;
+		padding: 5px;
+	}
+
+
+.footer {
+	width: 100%;
+	height: 80px;
+	background-color: black;
+		.container {
+			height: inherit;
+		}
+
+		&__content {
+			height: inherit;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__copy {
+				color: white;
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 13px;
+		}
+
+		&__logo {
+			height: 25px;
+				& img {
+					
+				}
+		}
+}
+
+
+
+
